@@ -1,4 +1,3 @@
-// n84cmCWWhE7BUUrDSwY8DMAx api key
 const { removeBackgroundFromImageFile } = require("remove.bg");
 
 const backgroundService = {
@@ -7,7 +6,7 @@ const backgroundService = {
       const outputFile = `./public/nobg/${Date.now()}-no-bg.png`;
       await removeBackgroundFromImageFile({
         path: inputPath,
-        apiKey: "n84cmCWWhE7BUUrDSwY8DMAx",
+        apiKey: process.env.APIKEY,
         size: "regular",
         type: "auto",
         outputFile,
